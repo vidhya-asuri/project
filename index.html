@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Purchase Orders</title>
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+    
+      	<div class="grid-container " >
+		<div class="grid-x grid-margin-x grid-padding-y" > 
+			<div class="large-2 medium-2  cell ">
+			</div>
+			<div class="large-8 medium-8  cell " id="addPOFormDiv">
+			  	<h5> Enter a new purchase order </h5>
+				<form  id="addPOForm"  class="text-center">
+	            	<div class="floated-label-wrapper">
+		              		<label for="username">Your name </label>
+		              		<input type="text" id="username" name="username input" placeholder="Enter your name " required>
+			              <label for="userEmail">Email</label>
+			              <input type="text" id="userEmail" name="userEmail input" placeholder="Enter your email">
+			              <label for="cost">Cost </label>
+			              <input type="text" id="cost " placeholder="Cost " name="cost" required >
+			              <label for="reason">Reason </label>
+	   		              <textarea id="reason" name="reason" placeholder=" Why ? "> </textarea> 
+		            </div>
+      				    <input id="addPO" class="button " type="submit" value="Enter purchase order">
+				</form>
+			  
+			</div>
+			<div class="large-2 medium-2  cell ">
+			</div>
+		</div>
+	</div>  <!--  End -- Add new purchse order. -->
+    
+ 
+		
+        <script src="../js/lib/jquery.min.js"></script>
+        <script src="../js/lib/underscore-min.js"></script>
+        <script src="../js/lib/backbone-min.js"></script>
+        <script src="../js/test.js"></script>
+    </body>
+</html>
