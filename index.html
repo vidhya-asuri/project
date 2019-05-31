@@ -5,10 +5,12 @@
         <title>Purchase Orders</title>
         <link rel="stylesheet" href="css/foundation.min.css">
         <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/tabulator.min.css" >
+        
     </head>
     <body>
     
-      	<div class="grid-container " >
+    <div class="grid-container " >
 		<div class="grid-x grid-margin-x grid-padding-y" > 
 			<div class="large-2 medium-2  cell ">
 			</div>
@@ -16,14 +18,23 @@
 			  	<h5> Enter a new purchase order </h5>
 				<form  id="addPOForm"  class="text-center">
 	            	<div class="floated-label-wrapper">
-		              		<label for="username">Your name </label>
-		              		<input type="text" id="username" name="username input" placeholder="Enter your name " required>
-			              <label for="userEmail">Email</label>
-			              <input type="text" id="userEmail" name="userEmail input" placeholder="Enter your email">
-			              <label for="cost">Cost </label>
-			              <input type="text" id="cost " placeholder="Cost " name="cost" required >
-			              <label for="reason">Reason </label>
-	   		              <textarea id="reason" name="reason" placeholder=" Why ? "> </textarea> 
+		              		<label for="name">Name </label>
+		              		<input type="text" id="name" name="name" placeholder="Enter your name " required>
+		              		
+			              <label for="email">Email</label>
+			              <input type="text" id="email" name="email" placeholder="Enter your email">
+			              
+			              <label for="vendor">Vendor </label>
+			              <input type="text" id="vendor" name="vendor" placeholder="Enter vendor name ">
+			              
+			              <label for="description">Description </label>
+	   		               <input type="text" id="description" name="description" placeholder="Describe your purchase and why you need it">
+	   		                
+			              <label for="amount">Amount </label>
+			              <input type="text" id="amount" placeholder="Total amount of PO" name="amount" required >
+			              
+			              <label for="location">Purchase Location </label>
+			              <input type="text" id="location" placeholder="Which location is this PO for? " name="location" required >
 		            </div>
       				    <input id="addPO" class="button " type="submit" value="Enter purchase order">
 				</form>
@@ -33,12 +44,26 @@
 			</div>
 		</div>
 	</div>  <!--  End -- Add new purchse order. -->
+	<div class="grid-container " id="purchaseOrdersListDiv">
+		<div class="grid-x grid-margin-x grid-padding-y" > 
+		      <div class="large-12 medium-12 callout cell">
+				  <!--  Table with list of purchase orders -->
+	      		  <div class="card-divider">
+	      		  		<p> Purchase Orders </p>
+				  </div>
+				  <div id="purchaseOrdersList"> 
+				  <!--  Location	OS	MCO PO	Vendor	Memo	Created By	Status	Created -->
+				  </div>
+	      	</div>
+		</div>
+	</div>
     
- 
-		
         <script src="../js/lib/jquery.min.js"></script>
         <script src="../js/lib/underscore-min.js"></script>
         <script src="../js/lib/backbone-min.js"></script>
+        <script type="text/javascript" src="js/lib/tabulator.js"></script>
+  		<script type="text/javascript" src="js/lib/moment.min.js"></script>
         <script src="../js/test.js"></script>
+        
     </body>
 </html>
